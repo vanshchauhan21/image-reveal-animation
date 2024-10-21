@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45rem;
+    height: 25rem;
+}
+
+.bg,
+.reveal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./images/bg4.png");
+    background-size: cover;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bg h1 {
+    font-family: poppins;
+    text-align: center;
+    background: linear-gradient(to right, #0000FF 0%, #FF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.reveal {
+    display: grid;
+    grid-auto-flow: column;
+    z-index: 10;
+}
+
+.reveal>div {
+    background: url("./images/bg5.png") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    transition: all 1.6s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.reveal>div:hover {
+    opacity: 1;
+    transition: 0s;
+}
